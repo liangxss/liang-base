@@ -9,6 +9,7 @@ import com.facebook.common.util.ByteConstants;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.imagepipeline.cache.MemoryCacheParams;
 import com.facebook.imagepipeline.core.ImagePipelineConfig;
+import com.liang.base.util.CrashHandler;
 
 /**
  * Created by liang on 2017/3/27.
@@ -24,6 +25,8 @@ public class MyApplication extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         mApplication = this;
+        CrashHandler handler = CrashHandler.getInstance();
+        handler.init(this);
         initFresco();
     }
 
@@ -49,8 +52,6 @@ public class MyApplication extends MultiDexApplication {
                 .setMainDiskCacheConfig(diskCacheConfig)
                 .setBitmapsConfig(Bitmap.Config.RGB_565)
                 .build();
-
-
         Fresco.initialize(this,config);
     }
 }

@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.alibaba.fastjson.JSON;
 import com.liang.base.BaseActivity;
+import com.liang.base.MyConstants;
 import com.liang.base.R;
 import com.liang.base.adapter.GoodsListAdapter;
 import com.liang.base.bean.GoodsBean;
@@ -34,7 +35,7 @@ public class PrtListActivity extends BaseActivity {
     private int page = 0;
     private View loadMoreLayout;
     private GoodsListAdapter adapter;
-    private String url = "http://api.1-blog.com/biz/bizserver/xiaohua/list.do";
+//    private String url = "http://api.1-blog.com/biz/bizserver/xiaohua/list.do";
 
 
     @Override
@@ -119,7 +120,7 @@ public class PrtListActivity extends BaseActivity {
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("page", page+"");
 
-        OkHttpClientManager.postAsyn(url, params, new OkHttpClientManager.StringCallback() {
+        OkHttpClientManager.postAsyn(MyConstants.GOODS, params, new OkHttpClientManager.StringCallback() {
             @Override
             public void onError(Request request, Exception e) {
                 LogUtil.i("liang", e.toString());

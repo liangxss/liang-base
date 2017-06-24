@@ -107,7 +107,7 @@ public class CommonPreference {
 
 
 	private final static String API_HOST = "_hua_fen_api_host";
-	private final static String DEFAULT_DEV_HOST = "http://api-test.huapu.io:8080/api/";
+	private final static String DEFAULT_DEV_HOST = "http://api-test:8080/api/";
 
 	public static void setApiHost(String url){
 		CommonPreference.setStringValue(API_HOST,url);

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.liang.base.util.CommonUtils;
+import com.liang.base.util.CrashHandler;
 import com.liang.base.util.LogUtil;
 import com.liang.base.view.TitleBar;
 

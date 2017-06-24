@@ -1,9 +1,10 @@
 package com.liang.base.util;
 
+import android.annotation.SuppressLint;
 import android.os.Debug;
 
 
-import com.liang.base.MyConstants;
+import com.liang.base.Config;
 
 import static android.util.Log.DEBUG;
 import static android.util.Log.ERROR;
@@ -13,13 +14,15 @@ import static android.util.Log.WARN;
 /**
  * Created by liang on 2017/3/27.
  */
+@SuppressLint("LogTagMismatch")
 public final class LogUtil {
 
     public static final String TAG = LogUtil.class.getSimpleName();
 
     private static boolean isLoggable(int level) {
-        return MyConstants.printLog /*|| android.util.Log.isLoggable(TAG, level)*/ ;
+        return Config.DEBUG; /*|| android.util.Log.isLoggable(TAG, level)*/
     }
+
 
     public static void i(Object... objects) {
         if (isLoggable(INFO)) {
