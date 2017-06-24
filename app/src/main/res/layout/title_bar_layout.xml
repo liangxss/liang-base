@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/layoutBase"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="#ffffffff"
+        >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            >
+            <TextView
+                android:id="@+id/tvTitleBarLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btnTitleBarLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/btn_title_left_states" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/titleBarCenterLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvTitleBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="#888888"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            >
+
+            <TextView
+                android:id="@+id/tvTitleBarRight"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                android:text="什么是芝麻信用"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:id="@+id/btnTitleBarRight"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:paddingRight="10dp"
+                android:src="@drawable/btn_title_left_states"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/divider"
+        style="@style/divider_line_horizontal" />
+</merge>

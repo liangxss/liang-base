@@ -1,0 +1,13 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.idea
+<<<<<<< HEAD
+ptr-lib/build
+=======
+>>>>>>> 3933f922d0054b8fbecbe1955483b4471e0aba50
