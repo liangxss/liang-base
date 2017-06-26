@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.liang.base.R;
-import com.liang.base.activity.WeatherActivity;
+import com.liang.base.activity.MainActivity;
 import com.liang.base.bean.GoodsBean;
 import com.liang.base.util.ArrayUtil;
 import com.liang.base.util.ImageLoader;
@@ -94,7 +94,7 @@ public class GoodsListAdapter extends CommonWrapper<RecyclerView.ViewHolder>{
             vh.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(mContext, WeatherActivity.class);
+                    Intent intent = new Intent(mContext, MainActivity.class);
                     if (fragment == null) {
                         ((Activity) mContext).startActivity(intent);
                     } else {
