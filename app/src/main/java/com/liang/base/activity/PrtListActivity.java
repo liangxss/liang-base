@@ -101,7 +101,7 @@ public class PrtListActivity extends BaseActivity {
     }
 
     @Override
-    public void doBusiness(Context mContext) {
+    public void initData(Context mContext) {
         startRequestForGoods();
     }
 

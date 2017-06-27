@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.liang.base.util.CommonUtils;
-import com.liang.base.util.CrashHandler;
 import com.liang.base.util.LogUtil;
 import com.liang.base.view.TitleBar;
 
@@ -42,7 +41,7 @@ public abstract class BaseActivity extends FragmentActivity implements
             setContentView(mContextView);
             initView(mContextView);
             setOnClickListener();
-            doBusiness(this);
+            initData(this);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -106,14 +105,15 @@ public abstract class BaseActivity extends FragmentActivity implements
      *
      * @param mContext
      */
-    public abstract void doBusiness(Context mContext);
+    public abstract void initData(Context mContext);
 
-    /** View点击 **/
-    public abstract void widgetClick(View v);
     /**
      * [设置监听]
      */
     public abstract void setOnClickListener();
+
+    /** View点击 **/
+    public abstract void widgetClick(View v);
 
     @SuppressWarnings("unchecked")
     public <T extends View> T find(int resId) {
